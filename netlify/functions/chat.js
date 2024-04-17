@@ -56,6 +56,7 @@ exports.handler = async function (event, context) {
     try {
       const jsonBody = JSON.parse(body);
       const apiKey = getAPIKey(headers) || CLAUDE_API_KEY;
+
       if (!apiKey) {
         return {
           statusCode: 403,
@@ -77,8 +78,10 @@ exports.handler = async function (event, context) {
       const response = await fetch(`${CLAUDE_BASE_URL}/v1/complete`, {
         method: "POST",
         headers: {
+          accept: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
+          "x-api-key": apiKey,
+          "anthropic-version": "2023-06-01",
         },
         body: JSON.stringify(claudeRequestBody),
       });
@@ -142,9 +145,15 @@ function convertMessagesToPrompt(messages) {
 }
 
 function claudeToChatGPTResponse(claudeResponse, stream = false) {
+  console.log(claudeResponse);
   const completion = claudeResponse["completion"];
   const timestamp = Math.floor(Date.now() / 1000);
-  const completionTokens = completion.split(" ").length;
+
+  let completionTokens = 0;
+  if (completion) {
+    completionTokens = completion.split(" ").length;
+  }
+
   const result = {
     id: `chatcmpl-${timestamp}`,
     created: timestamp,
@@ -181,6 +190,11 @@ const role_map = {
   system: "Human",
   user: "Human",
   assistant: "Assistant",
+};
+
+const stop_reason_map = {
+  stop_sequence: "stop",
+  max_tokens: "length",
 };
 
 const model_map = {
