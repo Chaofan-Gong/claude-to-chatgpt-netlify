@@ -46,7 +46,7 @@ exports.handler = async function (event, context) {
 
     try {
       const jsonBody = JSON.parse(body);
-      const apiKey = getAPIKey(headers);
+      const apiKey = getAPIKey(headers) || CLAUDE_API_KEY;
       if (!apiKey) {
         return {
           statusCode: 403,
@@ -114,7 +114,7 @@ function getAPIKey(headers) {
   if (authorization) {
     return authorization.split(" ")[1];
   }
-  return ""; // Default API key or throw an error if essential
+  return false; // Default API key or throw an error if essential
 }
 
 function convertMessagesToPrompt(messages) {
