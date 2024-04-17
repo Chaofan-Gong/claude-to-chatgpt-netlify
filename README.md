@@ -16,6 +16,13 @@ Click this button to deploy the project to your Netlify account:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/samestrin/claude-to-chatgpt-netlify)
 
+## Endpoints
+
+Once deployed, two endpoints are available:
+
+- `/v1/models`
+- `/v1/chat/completions`
+
 ## Testing your claude-to-chatgpt-netlify deployment
 
 Start your Netlify dev server using the command:
