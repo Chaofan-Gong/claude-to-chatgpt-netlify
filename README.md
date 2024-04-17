@@ -26,7 +26,7 @@ Start your Netlify dev server using the command:
 netlify dev
 ```
 
-Use the following curl command to test your deployment:
+then use the following curl command to test your deployment:
 
 ```
 curl -X POST http://localhost:8888/v1/chat/completions \
