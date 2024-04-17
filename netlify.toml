@@ -1,6 +1,6 @@
 [build]
   functions = "netlify/functions"
-  publish = "build"  # Directory of your static files, if applicable
+  publish = ""  # Directory of your static files, if applicable
 
 [[redirects]]
   from = "/api/chat"
