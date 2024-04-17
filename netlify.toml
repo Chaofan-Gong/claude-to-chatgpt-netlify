@@ -2,7 +2,13 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/api/chat"
+  from = "/v1/chat/completions"
   to = "/.netlify/functions/chat"
   status = 200
   methods = ["POST"]
+  
+[[redirects]]
+  from = "/v1/models"
+  to = "/.netlify/functions/chat"
+  status = 200
+  methods = ["POST", "GET"]
