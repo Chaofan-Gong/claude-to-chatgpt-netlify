@@ -16,7 +16,9 @@
     "openai",
     "anthropic",
     "ai",
-    "llm"
+    "llm",
+    "api",
+    "rest"
   ],
   "author": "Sam Estrin",
   "license": "ISC",
