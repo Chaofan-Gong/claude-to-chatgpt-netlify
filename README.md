@@ -20,7 +20,13 @@ Click this button to deploy the project to your Netlify account:
 
 ## Testing your claude-to-chatgpt-netlify deployment
 
-Use the following curl command to test your deployment.
+Start your Netlify dev server using the command:
+
+```
+netlify dev
+```
+
+Use the following curl command to test your deployment:
 
 ```
 curl -X POST http://localhost:8888/v1/chat/completions \
