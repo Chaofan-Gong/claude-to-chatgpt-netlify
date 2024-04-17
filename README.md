@@ -23,7 +23,7 @@ Once deployed, two endpoints are available:
 - `/v1/models`
 - `/v1/chat/completions`
 
-## Testing your claude-to-chatgpt-netlify deployment
+## Testing your claude-to-chatgpt-netlify deployment locally
 
 Start your Netlify dev server using the command:
 
