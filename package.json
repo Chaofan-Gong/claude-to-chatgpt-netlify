@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/samestrin/claude-to-chatgpt-netlify#readme",
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "got": "^14.2.1"
   }
 }
