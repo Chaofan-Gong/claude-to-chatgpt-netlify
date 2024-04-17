@@ -58,7 +58,7 @@ exports.handler = async function (event, context) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${CLAUDE_API_KEY}`,
         },
         body: JSON.stringify(claudeRequestBody),
       });
