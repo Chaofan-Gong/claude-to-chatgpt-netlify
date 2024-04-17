@@ -6,13 +6,7 @@ exports.handler = async function (event, context) {
     fetch = (await import("node-fetch")).default;
   }
 
-  const {
-    httpMethod: method,
-    path,
-    headers,
-    body,
-    queryStringParameters,
-  } = event;
+  const { httpMethod: method, path, headers, body } = event;
 
   // Set constants and environment variables
   const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY;
@@ -97,7 +91,6 @@ exports.handler = async function (event, context) {
       } else {
         // Handle streaming responses here
         // Netlify functions do not support streaming responses in the same way Cloudflare Workers do,
-        // so this would need to be adjusted depending on your use case.
         return { statusCode: 501, body: "Streaming not supported" };
       }
     } catch (error) {
