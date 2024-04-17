@@ -1,0 +1,27 @@
+{
+  "name": "claude-to-chatgpt-netlify",
+  "version": "0.0.1",
+  "description": "A Netlify Function based port of jtsang4/claude-to-chatgpt.",
+  "main": "api/chat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samestrin/claude-to-chatgpt-netlify.git"
+  },
+  "keywords": [
+    "claude",
+    "chatgpt",
+    "openai",
+    "anthropic",
+    "ai",
+    "llm"
+  ],
+  "author": "Sam Estrin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samestrin/claude-to-chatgpt-netlify/issues"
+  },
+  "homepage": "https://github.com/samestrin/claude-to-chatgpt-netlify#readme"
+}
