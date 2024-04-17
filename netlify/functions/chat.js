@@ -6,7 +6,13 @@ exports.handler = async function (event, context) {
     fetch = (await import("node-fetch")).default;
   }
 
-  const { httpMethod: method, headers, body, queryStringParameters } = event;
+  const {
+    httpMethod: method,
+    path,
+    headers,
+    body,
+    queryStringParameters,
+  } = event;
 
   // Set constants and environment variables
   const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY;
@@ -23,7 +29,7 @@ exports.handler = async function (event, context) {
 
   // Handle GET request
   if (method === "GET") {
-    if (queryStringParameters && queryStringParameters.path === "v1/models") {
+    if (path.endsWith("/v1/models")) {
       return {
         statusCode: 200,
         headers: { "Content-Type": "application/json" },
