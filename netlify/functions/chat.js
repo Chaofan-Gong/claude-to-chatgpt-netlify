@@ -97,7 +97,7 @@ exports.handler = async function (event, context) {
       console.error("Error:", error);
       return {
         statusCode: 500,
-        body: "Internal Server Error: " + error.message,
+        body: "Internal Server Error",
       };
     }
   }
@@ -138,7 +138,6 @@ function convertMessagesToPrompt(messages) {
 }
 
 function claudeToChatGPTResponse(claudeResponse, stream = false) {
-  console.log(claudeResponse);
   const completion = claudeResponse["completion"];
   const timestamp = Math.floor(Date.now() / 1000);
 
