@@ -24,6 +24,9 @@
     "url": "https://github.com/samestrin/claude-to-chatgpt-netlify/issues"
   },
   "homepage": "https://github.com/samestrin/claude-to-chatgpt-netlify#readme",
+  "engines": {
+    "node": "20.12.2"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2"
   }
