@@ -8,6 +8,14 @@ exports.handler = async function (event, context) {
 
   const { httpMethod: method, headers, body, queryStringParameters } = event;
 
+  // Set constants and environment variables
+  const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY;
+  const CLAUDE_BASE_URL =
+    process.env.CLAUDE_BASE_URL || "https://api.anthropic.com";
+  const MAX_TOKENS = process.env.CLAUDE_MAX_TOKENS || 100000;
+  const MAX_REQUEST_SIZE_BYTES =
+    process.env.CLAUDE_MAX_REQUEST_SIZE_BYTES || 1048576;
+
   // Handle OPTIONS request for CORS
   if (method === "OPTIONS") {
     return handleOPTIONS();
