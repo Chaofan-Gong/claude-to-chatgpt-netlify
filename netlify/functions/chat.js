@@ -39,7 +39,10 @@ exports.handler = async function (event, context) {
 
   // Validate POST request
   if (method === "POST") {
-    if (!headers["content-length"] || headers["content-length"] > 1048576) {
+    if (
+      !headers["content-length"] ||
+      headers["content-length"] > MAX_REQUEST_SIZE_BYTES
+    ) {
       // 1 MB
       return { statusCode: 413, body: "Request payload too large" };
     }
