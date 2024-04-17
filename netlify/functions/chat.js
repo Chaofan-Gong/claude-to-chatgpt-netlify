@@ -1,6 +1,11 @@
-const got = require("got");
+let fetch;
 
 exports.handler = async function (event, context) {
+  // Ensure fetch is loaded dynamically
+  if (!fetch) {
+    fetch = (await import("node-fetch")).default;
+  }
+
   // Extract method and headers from the event
   const { httpMethod: method, headers, body } = event;
 
@@ -49,22 +54,23 @@ exports.handler = async function (event, context) {
         stream,
       };
 
-      const response = await got.post(`${CLAUDE_BASE_URL}/v1/complete`, {
+      const response = await fetch(`${CLAUDE_BASE_URL}/v1/complete`, {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${apiKey}`,
         },
-        json: claudeRequestBody,
-        responseType: "json",
+        body: JSON.stringify(claudeRequestBody),
       });
 
+      const responseData = await response.json();
       return {
         statusCode: 200,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(response.body),
+        body: JSON.stringify(responseData),
       };
     } catch (error) {
-      console.error("Error:", error.response.body);
+      console.error("Error:", error);
       return { statusCode: 500, body: "Internal Server Error" };
     }
   } else {
