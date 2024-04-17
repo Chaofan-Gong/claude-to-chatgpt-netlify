@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/samestrin/claude-to-chatgpt-netlify/issues"
   },
-  "homepage": "https://github.com/samestrin/claude-to-chatgpt-netlify#readme"
+  "homepage": "https://github.com/samestrin/claude-to-chatgpt-netlify#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
