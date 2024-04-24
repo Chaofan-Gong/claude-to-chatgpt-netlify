@@ -1,6 +1,6 @@
 # claude-to-chatgpt-netlify
 
-A Netlify Function based port of [jtsang4/claude-to-chatgpt](https://github.com/jtsang4/claude-to-chatgpt).
+A Netlify Function based port of [jtsang4/claude-to-chatgpt](https://github.com/jtsang4/claude-to-chatgpt) cloudflare-worker.js.
 
 Netlify Function calls offer more resources than Cloudflare Workers and may be more performant in some use cases.
 
