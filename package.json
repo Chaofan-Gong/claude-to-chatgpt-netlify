@@ -1,6 +1,6 @@
 {
   "name": "claude-to-chatgpt-netlify",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A Netlify Function based port of jtsang4/claude-to-chatgpt.",
   "main": "api/chat",
   "scripts": {
