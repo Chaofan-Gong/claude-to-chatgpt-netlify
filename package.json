@@ -1,6 +1,6 @@
 {
   "name": "claude-to-chatgpt-netlify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Netlify Function based port of jtsang4/claude-to-chatgpt.",
   "main": "api/chat",
   "scripts": {
@@ -21,7 +21,7 @@
     "rest"
   ],
   "author": "Sam Estrin",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/samestrin/claude-to-chatgpt-netlify/issues"
   },
