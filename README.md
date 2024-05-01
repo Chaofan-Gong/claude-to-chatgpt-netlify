@@ -14,7 +14,7 @@ This project converts the API of Anthropic's Claude model to the OpenAI Chat API
 - ~~💦 Support streaming response~~ (_Netlify Functions do not support streaming_)
 - 🐻 Support claude-instant-1, claude-2 models
 
-A PHP port, designed to deploy at DigitalOcean App Platform, is available [samestrin/claude-to-chatgpt-digitalocean](https://github.com/samestrin/claude-to-chatgpt-digitalocean) here.
+A PHP port, designed to deploy on DigitalOcean App Platform, is available [samestrin/claude-to-chatgpt-digitalocean](https://github.com/samestrin/claude-to-chatgpt-digitalocean) here.
 
 ## Deploy to Netlify
 
