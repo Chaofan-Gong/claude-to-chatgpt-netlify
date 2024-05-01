@@ -6,7 +6,7 @@
 
 A Node.js Netlify Function based port of [jtsang4/claude-to-chatgpt](https://github.com/jtsang4/claude-to-chatgpt)'s cloudflare-worker.js.
 
-Netlify Function calls offer more resources than Cloudflare Workers and may be more performant in some use cases.
+Netlify Function calls offer _slightly_ more resources than Cloudflare Workers and may be more performant in some use cases.
 
 This project converts the API of Anthropic's Claude model to the OpenAI Chat API format.
 
