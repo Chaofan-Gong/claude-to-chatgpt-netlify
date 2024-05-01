@@ -11,7 +11,7 @@ Netlify Function calls offer _slightly_ more resources than Cloudflare Workers a
 This project converts the API of Anthropic's Claude model to the OpenAI Chat API format.
 
 - ✨ Call Claude API like OpenAI ChatGPT API
-  ~~- 💦 Support streaming response~~ (_Netlify Functions do not support streaming_)
+- ~~💦 Support streaming response~~ (_Netlify Functions do not support streaming_)
 - 🐻 Support claude-instant-1, claude-2 models
 
 ## Deploy to Netlify
