@@ -121,8 +121,6 @@ This application can be configured with various options through environment vari
 - **CLAUDE_MAX_TOKENS**: Maximum tokens that can be processed in a request; defaults to 100000 if not set.
 - **CLAUDE_MAX_REQUEST_SIZE_BYTES**: Maximum size of the request payload in bytes; defaults to 1048576 (1MB) if not set.
 
-
-
 ## Contribute
 
 Contributions to this project are welcome. Please fork the repository and submit a pull request with your changes or improvements.
