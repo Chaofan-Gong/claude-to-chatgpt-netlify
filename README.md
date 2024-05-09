@@ -112,6 +112,17 @@ curl -X POST http://localhost:8888/v1/chat/completions \
 -d '{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Hello, how are you?"}]}'
 ```
 
+## Options
+
+This application can be configured with various options through environment variables:
+
+- **CLAUDE_API_KEY**: API key for accessing the Claude API.
+- **CLAUDE_BASE_URL**: URL endpoint for the Claude API; defaults to "https://api.anthropic.com" if not set.
+- **CLAUDE_MAX_TOKENS**: Maximum tokens that can be processed in a request; defaults to 100000 if not set.
+- **CLAUDE_MAX_REQUEST_SIZE_BYTES**: Maximum size of the request payload in bytes; defaults to 1048576 (1MB) if not set.
+
+
+
 ## Contribute
 
 Contributions to this project are welcome. Please fork the repository and submit a pull request with your changes or improvements.
