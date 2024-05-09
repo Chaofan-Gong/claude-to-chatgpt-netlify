@@ -4,17 +4,23 @@
 
 ![Version 0.0.1](https://img.shields.io/badge/Version-0.0.1-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Built with Node.js](https://img.shields.io/badge/Built%20with-Node.js-green)](https://nodejs.org/)
 
-A Node.js Netlify Function based port of [jtsang4/claude-to-chatgpt](https://github.com/jtsang4/claude-to-chatgpt)'s cloudflare-worker.js.
+A Node.js Netlify Function based port of [jtsang4/claude-to-chatgpt](https://github.com/jtsang4/claude-to-chatgpt)'s cloudflare-worker.js. This project converts the API of Anthropic's Claude model to the OpenAI Chat API format.
 
 Netlify Function calls offer _slightly_ more resources than Cloudflare Workers and may be more performant in some use cases.
 
-This project converts the API of Anthropic's Claude model to the OpenAI Chat API format.
-
-- ✨ Call Claude API like OpenAI ChatGPT API
-- ~~💦 Support streaming response~~ (_Netlify Functions do not support streaming_)
-- 🐻 Support claude-instant-1, claude-2 models
-
 A PHP port, designed to deploy on DigitalOcean App Platform, is available [samestrin/claude-to-chatgpt-digitalocean](https://github.com/samestrin/claude-to-chatgpt-digitalocean) here.
+
+## Dependencies
+
+- **Node.js**: The script runs in a Node.js environment.
+- **node-fetch**: A Node.js module used for making HTTP requests to external APIs. 
+
+## Features
+
+- **API Compatibility**: Enables Claude model integration by mimicking the OpenAI ChatGPT API structure.
+- **Model Flexibility**: Supports various configurations of Claude models including claude-instant-1 and claude-2.
+- **Performance Optimization**: Utilizes the enhanced capabilities of Netlify Functions for improved performance over alternatives like Cloudflare Workers.
+
 
 ## Deploy to Netlify
 
