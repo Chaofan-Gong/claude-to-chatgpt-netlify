@@ -112,6 +112,10 @@ curl -X POST http://localhost:8888/v1/chat/completions \
 -d '{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Hello, how are you?"}]}'
 ```
 
+## Contribute
+
+Contributions to this project are welcome. Please fork the repository and submit a pull request with your changes or improvements.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
